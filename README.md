@@ -6,8 +6,11 @@
 
 **Requirements**
 
-- App downloaded on device;
-- Device connected through adb;
+- App downloaded on device
+- Device connected through adb
+```bash
+adb device
+```
 - ```pip3 install -r requirements.txt```
 
 **Usage**
