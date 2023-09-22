@@ -16,5 +16,5 @@ adb device
 **Usage**
 
 ```bash
-./apk-extractor.py <package_name> <output_dir> 
+./apk-extractor.py  <output_dir> <package_name>
 ```
