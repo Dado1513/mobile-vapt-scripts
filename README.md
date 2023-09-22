@@ -11,10 +11,11 @@
 ```bash
 adb device
 ```
+- `adb` in `PATH`
 - ```pip3 install -r requirements.txt```
 
 **Usage**
 
 ```bash
-./apk-extractor.py  <output_dir> <package_name>
+./apk-extractor  <output_dir> <package_name>
 ```
