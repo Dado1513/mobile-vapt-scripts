@@ -12,13 +12,13 @@ from pathlib import Path
 if __name__=="__main__":
     if len(sys.argv) > 2:
         package_name = sys.argv[2]
-        output_dir = Path(sys.argv[1])
+        output_dir = sys.argv[1]
         os.makedirs(output_dir, exist_ok=True)
         output = subprocess.check_output(["adb", "shell", "pm","path", package_name]).decode('utf-8').strip()
         list_apk = output.split("\n")
         for apk in list_apk:
             path = apk.split("package:")[1]
-            output_downloaded_app = subprocess.call(["adb","pull", path, output_dir])
+            output_downloaded_app = os.system(f"adb pull {path} {output_dir}")
             logger.info(f"Downloading app {apk}")
     else:
         logger.error("Error. Usage:")
